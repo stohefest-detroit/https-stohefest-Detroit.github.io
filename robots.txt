@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://stohefest-detroit.github.io/sto-hefest-detroit/sitemap.xml
