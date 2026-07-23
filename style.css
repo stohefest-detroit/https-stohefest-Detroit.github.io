@@ -1,345 +1,212 @@
-/* ================= RESET ================= */
+Стиль css
 
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
+/* ================= SECTION INTRO ================= */
 
-body {
-  font-family: Arial, sans-serif;
-  background: #111;
-  color: #fff;
-  line-height: 1.6;
-  overflow-x: hidden;
-}
-
-/* ================= CONTAINER ================= */
-
-section {
-  padding: 80px 20px;
-}
-
-.container {
-  max-width: 1100px;
-  margin: 0 auto;
-}
-
-/* ================= HERO ================= */
-
-.hero {
-  background: url("hero.jpg") center / cover no-repeat;
-  min-height: 100vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  position: relative;
-  transform-origin: center;
-}
-
-.hero::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: rgba(0, 0, 0, 0.5);
-}
-
-.overlay {
-  background: rgba(30, 30, 30, 0.65);
-  backdrop-filter: blur(8px);
-  padding: 40px 60px;
-  border-radius: 15px;
+.section-intro {
+  max-width: 800px;
+  margin: -20px auto 40px;
   text-align: center;
-  max-width: 900px;
-  margin: 0 auto;
-  animation: heroFade 1.2s ease forwards;
-  opacity: 0;
+  color: #ccc;
+  font-size: 18px;
 }
-.hero h1 {
-  font-size: 42px;
+
+
+/* ================= ARTICLES ================= */
+
+.articles-section {
+  background: #151515;
+}
+
+.articles-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 25px;
+  margin-top: 40px;
+}
+
+.article-card {
+  background: #1e1e1e;
+  border: 1px solid #333;
+  border-radius: 12px;
+  padding: 30px;
+  transition: 0.3s ease;
+}
+
+.article-card:hover {
+  transform: translateY(-5px);
+  border-color: #e10600;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
+}
+
+.article-icon {
+  font-size: 38px;
+  color: #e10600;
   margin-bottom: 20px;
 }
 
-.subtitle {
-  font-size: 22px;
+.article-card h3 {
+  font-size: 24px;
   margin-bottom: 15px;
 }
 
-.small-text {
-  font-size: 16px;
-  margin-bottom: 30px;
-}
-
-.btn {
-  display: inline-block;
-  background: #e10600;
-  color: #fff;
-  padding: 15px 30px;
-  text-decoration: none;
-  border-radius: 6px;
-  transition: 0.3s;
-  width: fit-content;
-  margin: 15px auto;
-}
-
-.btn:hover {
-  background: #b80000;
-}
-
-.hero-nav {
-  margin-top: 25px;
-  display: flex;
-  justify-content: center;
-  gap: 20px;
-}
-
-.hero-nav a {
-  color: #fff;
-  text-decoration: none;
-}
-
-.hero-nav a:hover {
-  color: #e10600;
-}
-
-/* ================= BIG TITLES ================= */
-
-.big-title {
-  font-size: 48px;
-  text-align: center;
-  margin-bottom: 40px;
-}
-
-/* ================= ACCORDION ================= */
-
-.accordion {
-  border-bottom: 1px solid #333;
-  padding: 10px 0;
-}
-
-.accordion-header {
-  font-size: 28px;
-  cursor: pointer;
-  padding: 10px 0;
-}
-
-.accordion-header:hover {
-  color: #e10600;
-}
-
-.accordion-content {
-  max-height: 0;
-  overflow: hidden;
-  transition: 0.4s ease;
-}
-
-.accordion-content p {
-  font-size: 20px;
+.article-card p {
   color: #ccc;
-  padding: 5px 0;
+  font-size: 17px;
+  margin-bottom: 20px;
 }
 
-/* ================= WHY BLOCK ================= */
-
-.why h3 {
-  font-size: 28px;
-  text-align: center;
-  margin-top: 25px;
-}
-
-.why p {
-  font-size: 18px;
-  text-align: center;
-  color: #ccc;
-}
-
-/* ================= CONTACTS ================= */
-
-.phones a {
-  display: block;
-  font-size: 30px;
-  margin: 10px 0;
-  text-decoration: none;
-  color: #fff;
-  text-align: center;
-}
-
-.phones a:hover {
+.article-link {
   color: #e10600;
+  text-decoration: none;
+  font-weight: bold;
+  transition: 0.3s ease;
 }
 
-.email {
+.article-link:hover {
+  color: #fff;
+}
+
+
+/* ================= VACANCIES ================= */
+
+.vacancies-section {
+  background: #111;
+}
+
+.vacancies-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 25px;
+  margin-top: 40px;
+}
+
+.vacancy-card {
+  background: #1e1e1e;
+  border: 1px solid #333;
+  border-radius: 12px;
+  padding: 30px;
   text-align: center;
+  transition: 0.3s ease;
+}
+
+.vacancy-card:hover {
+  transform: translateY(-5px);
+  border-color: #e10600;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
+}
+
+.vacancy-card i {
+  font-size: 40px;
+  color: #e10600;
+  margin-bottom: 20px;
+}
+
+.vacancy-card h3 {
+  font-size: 25px;
+  margin-bottom: 15px;
+}
+
+.vacancy-card p {
+  color: #ccc;
+  font-size: 17px;
+  min-height: 55px;
+}
+
+.vacancy-card .btn {
   margin-top: 20px;
-  font-size: 20px;
 }
 
-/* ================= MOBILE ================= */
+
+/* ================= VACANCY CONTACT ================= */
+
+.vacancy-contact {
+  margin-top: 60px;
+  padding: 35px;
+  text-align: center;
+  background: #1e1e1e;
+  border-radius: 12px;
+  border: 1px solid #333;
+}
+
+.vacancy-contact h3 {
+  font-size: 30px;
+  margin-bottom: 15px;
+}
+
+.vacancy-contact p {
+  color: #ccc;
+  font-size: 18px;
+}
+
+.vacancy-phones {
+  margin-top: 25px;
+}
+
+.vacancy-phones a {
+  display: block;
+  color: #fff;
+  font-size: 25px;
+  text-decoration: none;
+  margin: 8px 0;
+  transition: 0.3s ease;
+}
+
+.vacancy-phones a:hover {
+  color: #e10600;
+}
+
+
+/* ================= MOBILE ARTICLES & VACANCIES ================= */
 
 @media (max-width: 768px) {
-  .hero h1 {
-    font-size: 28px;
+
+  .articles-grid {
+    grid-template-columns: 1fr;
   }
 
-  .big-title {
-    font-size: 34px;
+  .vacancies-grid {
+    grid-template-columns: 1fr;
   }
 
-  .accordion-header {
+  .article-card {
+    padding: 25px;
+  }
+
+  .vacancy-card {
+    padding: 25px;
+  }
+
+  .article-card h3 {
+    font-size: 21px;
+  }
+
+  .vacancy-card h3 {
     font-size: 22px;
   }
 
-  .accordion-content p {
-    font-size: 18px;
+  .section-intro {
+    font-size: 16px;
   }
-}
-#openGallery {
-  display: block;
-  margin: 0 auto;
-}
-.gallery-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 15px;
-}
 
-.gallery-grid img {
-  width: 100%;
-  height: auto;
-  border-radius: 8px;
-  display: block;
-}
-/* ================= LIGHTBOX ================= */
-
-.lightbox {
-  position: fixed;
-  inset: 0;
-  background: rgba(0, 0, 0, 0.9);
-  display: none;
-  justify-content: center;
-  align-items: center;
-  z-index: 9999;
-  cursor: pointer;
-  animation: fadeIn 0.3s ease;
-}
-
-.lightbox img {
-  max-width: 90%;
-  max-height: 85%;
-  border-radius: 10px;
-}
-
-@keyframes fadeIn {
-  from {
-    opacity: 0;
+  .vacancy-contact {
+    padding: 25px 15px;
   }
-  to {
-    opacity: 1;
+
+  .vacancy-contact h3 {
+    font-size: 25px;
   }
-}
-/* ================= REVEAL ANIMATION ================= */
 
-.reveal {
-  opacity: 0;
-  transform: translateY(60px);
-  transition: opacity 0.8s ease, transform 0.8s ease;
-  will-change: opacity, transform;
-}
-
-.reveal.active {
-  opacity: 1;
-  transform: translateY(0);
-}
-button,
-.nav-links a {
-  transition: all 0.3s ease;
-}
-
-button:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
-}
-
-.nav-links a:hover {
-  opacity: 0.7;
-}
-
-html {
-  scroll-behavior: smooth;
-}
-@keyframes heroFade {
-  from {
-    opacity: 0;
-    transform: translateY(40px);
+  .vacancy-phones a {
+    font-size: 21px;
   }
-  to {
-    opacity: 1;
-    transform: translateY(0);
+
+  .hero-nav {
+    flex-wrap: wrap;
+    gap: 12px;
   }
-}
 
-body.lock-scroll {
-  overflow: hidden;
-}
-@media (max-width: 768px) {
-  .overlay {
-    padding: 30px 20px;
-    width: 100%;
+  .hero-nav a {
+    font-size: 14px;
   }
-}
-.address {
-  display: block;
-  text-align: center;
-  margin-top: 15px;
-  color: #ccc;
-  font-size: 18px;
-  text-decoration: none;
-}
 
-.address:hover {
-  color: #e10600;
-}
-.socials {
-  display: flex;
-  justify-content: center;
-  gap: 25px;
-  margin-top: 25px;
-}
-
-.socials a {
-  color: #fff;
-  text-decoration: none;
-  font-size: 18px;
-}
-
-.socials a:hover {
-  color: #e10600;
-}
-.socials {
-  display: flex;
-  justify-content: center;
-  gap: 25px;
-  margin-top: 30px;
-}
-
-.socials a {
-  color: white;
-  font-size: 28px;
-  text-decoration: none;
-}
-
-.socials a:hover {
-  color: #e10600;
-}
-.painter-btn {
-  display: block;
-  margin-top: 20px;
-  font-size: 18px;
-  padding: 12px 20px;
-}
-.paint-title {
-  text-align: center;
-  margin-top: 15px;
-  font-size: 18px;
-  color: #aaa;
 }
