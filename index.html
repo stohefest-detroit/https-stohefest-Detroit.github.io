@@ -948,7 +948,45 @@ if (vacanciesToggle && vacanciesContent) {
   );
 
 }
+/* ================= ARTICLES TOGGLE ================= */
 
+const articlesToggle =
+  document.getElementById("articlesToggle");
+
+const articlesContent =
+  document.getElementById("articlesContent");
+
+if (articlesToggle && articlesContent) {
+
+  articlesToggle.addEventListener(
+    "click",
+    function () {
+
+      if (
+        articlesContent.classList.contains("open")
+      ) {
+
+        articlesContent.style.maxHeight = null;
+
+        articlesContent.classList.remove("open");
+
+        articlesToggle.classList.remove("active");
+
+      } else {
+
+        articlesContent.classList.add("open");
+
+        articlesContent.style.maxHeight =
+          articlesContent.scrollHeight + "px";
+
+        articlesToggle.classList.add("active");
+
+      }
+
+    }
+  );
+
+}
 
           /* ================= GALLERY ================= */
 
