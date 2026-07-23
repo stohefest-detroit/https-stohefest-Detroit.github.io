@@ -896,6 +896,43 @@
               );
 
             });
+          /* ================= VACANCIES TOGGLE ================= */
+
+const vacanciesToggle =
+  document.getElementById("vacanciesToggle");
+
+const vacanciesContent =
+  document.getElementById("vacanciesContent");
+
+if (vacanciesToggle && vacanciesContent) {
+
+  vacanciesToggle.addEventListener(
+    "click",
+    function () {
+
+      if (vacanciesContent.classList.contains("open")) {
+
+        vacanciesContent.style.maxHeight = null;
+
+        vacanciesContent.classList.remove("open");
+
+        vacanciesToggle.classList.remove("active");
+
+      } else {
+
+        vacanciesContent.classList.add("open");
+
+        vacanciesContent.style.maxHeight =
+          vacanciesContent.scrollHeight + "px";
+
+        vacanciesToggle.classList.add("active");
+
+      }
+
+    }
+  );
+
+}
 
 
           /* ================= GALLERY ================= */
