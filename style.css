@@ -554,3 +554,46 @@ body.lock-scroll {
   }
 
 }
+/* ================= VACANCIES TOGGLE ================= */
+
+.vacancies-toggle {
+  position: relative;
+  cursor: pointer;
+  text-align: center;
+  user-select: none;
+}
+
+.vacancies-toggle .big-title {
+  margin-bottom: 10px;
+  transition: 0.3s ease;
+}
+
+.vacancies-toggle:hover .big-title {
+  color: #e10600;
+}
+
+.vacancies-arrow {
+  display: block;
+  font-size: 22px;
+  color: #e10600;
+  transition: transform 0.4s ease;
+  margin-bottom: 10px;
+}
+
+.vacancies-toggle.active .vacancies-arrow {
+  transform: rotate(180deg);
+}
+
+.vacancies-content {
+  max-height: 0;
+  overflow: hidden;
+  opacity: 0;
+  transition:
+    max-height 0.7s ease,
+    opacity 0.4s ease;
+}
+
+.vacancies-content.open {
+  opacity: 1;
+  margin-top: 20px;
+}
