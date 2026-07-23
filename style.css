@@ -597,3 +597,49 @@ body.lock-scroll {
   opacity: 1;
   margin-top: 20px;
 }
+/* ================= ARTICLES TOGGLE ================= */
+
+.articles-toggle {
+  position: relative;
+  cursor: pointer;
+  text-align: center;
+  user-select: none;
+}
+
+.articles-toggle .big-title {
+  margin-bottom: 10px;
+  transition: 0.3s ease;
+}
+
+.articles-toggle:hover .big-title {
+  color: #e10600;
+}
+
+.articles-arrow {
+  display: block;
+  font-size: 22px;
+  color: #e10600;
+  transition: transform 0.4s ease;
+  margin-bottom: 10px;
+}
+
+.articles-toggle.active .articles-arrow {
+  transform: rotate(180deg);
+}
+
+
+/* ================= ARTICLES CONTENT ================= */
+
+.articles-content {
+  max-height: 0;
+  overflow: hidden;
+  opacity: 0;
+  transition:
+    max-height 0.7s ease,
+    opacity 0.4s ease;
+}
+
+.articles-content.open {
+  opacity: 1;
+  margin-top: 20px;
+}
